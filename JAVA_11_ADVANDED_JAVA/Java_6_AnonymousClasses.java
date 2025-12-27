@@ -26,6 +26,9 @@ public class Java_6_AnonymousClasses {
 ANONYMOUS CLASSES – DEEP DIVE
 ================================================================================
 
+new Greet() { ... } = anonymous class implementing Greet, created inline and used one time.
+ Perfect for callbacks, event handlers, and temporary behavior.
+
 WHAT:
 -----
 • Local class without a name

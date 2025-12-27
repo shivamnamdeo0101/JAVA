@@ -128,4 +128,16 @@ INTERVIEW ONE-LINER:
 -------------------
 "Reflection allows Java programs to inspect and manipulate classes dynamically, crucial for frameworks and runtime behavior."
 ================================================================================
+
+
+| Use Case                            | Example                                                                               |
+| ----------------------------------- | ------------------------------------------------------------------------------------- |
+| **Frameworks & Libraries**          | Spring, Hibernate, JUnit use reflection to inspect classes, methods, and annotations. |
+| **Dependency Injection**            | Spring scans classes at runtime and injects dependencies.                             |
+| **Serialization / Deserialization** | Jackson/Gson use reflection to map JSON to POJO fields.                               |
+| **ORM (Object-Relational Mapping)** | Hibernate reads entity classes and maps fields to database columns.                   |
+| **Dynamic Proxies**                 | Creating dynamic implementation of interfaces (used in AOP, e.g., Spring AOP).        |
+| **Testing / Mocking**               | JUnit and Mockito access private methods or fields for testing.                       |
+| **Class Browsers / IDEs / Tools**   | Tools like `javap` or IntelliJ inspections use reflection.                            |
+
 */

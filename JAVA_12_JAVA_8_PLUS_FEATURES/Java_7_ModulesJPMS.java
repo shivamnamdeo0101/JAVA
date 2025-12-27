@@ -2,11 +2,18 @@ package JAVA_12_JAVA_8_PLUS_FEATURES;
 
 /**
  * Topic: Modules (JPMS)
+ *
+ * This is a demonstration of Java Platform Module System (JPMS).
+ * Actual module definitions and dependencies are declared in module-info.java.
  */
 public class Java_7_ModulesJPMS {
+
     public static void main(String[] args) {
         System.out.println("Java Platform Module System (JPMS) example");
-        // Actual module declaration is in module-info.java
+
+        // Example usage of a module class (would require module dependency in module-info.java)
+        // com.example.greet.Greeter greeter = new com.example.greet.Greeter();
+        // greeter.sayHello();
     }
 }
 
@@ -15,48 +22,72 @@ public class Java_7_ModulesJPMS {
 JPMS – DEEP DIVE
 ================================================================================
 
+
+JPMS is mainly used by:
+
+JDK itself
+
+Large enterprise systems
+
+Framework/library developers
+
+Plugin-based or embedded applications
+
+JPMS is NOT commonly used by:
+
+Spring Boot, most microservices, legacy projects
+
 WHAT:
 -----
-• Java 9+ module system
-• Groups packages, controls visibility, dependency
+• Java 9+ modular system
+• Groups related packages into modules
+• Controls visibility and enforces explicit dependencies
 
 WHY IT EXISTS:
 --------------
-• Avoid classpath hell
-• Encapsulation across packages
-• Explicit dependencies
+• Avoid "classpath hell" in large projects
+• Strong encapsulation across packages
+• Explicit declaration of dependencies for safer code
 
 INTERNAL WORKING:
 -----------------
-• module-info.java describes requires/exports
+• module-info.java declares:
+      - module name
+      - required modules (requires)
+      - exported packages (exports)
 • JVM loads modules at startup
-• Enforces access rules at compile & runtime
+• Compile-time and runtime enforce access rules
 
 CORE FEATURES:
 --------------
 ✔ Encapsulation at package level
-✔ Explicit dependencies
-✔ Strong module boundaries
+✔ Explicit module dependencies
+✔ Strong boundaries between modules
+✔ Supports modular runtime (jlink)
 
 ENTERPRISE PITFALLS:
 -------------------
-❌ Mixing module path and classpath
-❌ Exposing internal APIs
-❌ Circular dependencies
+❌ Mixing module path and classpath can break access rules
+❌ Exposing internal APIs reduces encapsulation
+❌ Circular module dependencies are not allowed
 
 REAL SYSTEM USAGE:
 -----------------
 ✔ Large enterprise systems
 ✔ JDK internal modules
-✔ Plugin-based architectures
+✔ Plugin-based architectures (e.g., IDEs, servers)
 
 INTERVIEW QUESTIONS + ANSWERS:
 ------------------------------
 Q1: Difference between module and package?
-A: Module = group of packages + dependency rules; Package = namespace
+A: Module = group of packages with dependency rules;
+   Package = namespace for classes without enforced boundaries.
+
+Q2: Can a module hide packages completely?
+A: Yes, only exported packages are visible to other modules; rest remain internal.
 
 INTERVIEW ONE-LINER:
 -------------------
-"JPMS brings strong modular boundaries, better encapsulation, and safer dependency management."
+"JPMS enforces strong modular boundaries, better encapsulation, and reliable dependency management."
 ================================================================================
 */
