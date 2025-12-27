@@ -1,3 +1,4 @@
+package JAVA_01_MEMO_JDK_GC;
 // ============================================================================
 // JVM MEMORY ARCHITECTURE + JIT (UPDATED ARROW DIAGRAM + BULLET EXPLANATION)
 // Java 8+  | Interview + Real-world ready

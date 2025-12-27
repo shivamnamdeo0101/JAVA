@@ -1,4 +1,4 @@
-package JAVA_1_MEMO_JDK_GC;
+package JAVA_01_MEMO_JDK_GC;
 /*
 Java Topics Checklist (Complete)
 

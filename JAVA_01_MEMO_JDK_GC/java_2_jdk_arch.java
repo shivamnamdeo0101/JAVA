@@ -1,4 +1,4 @@
-package JAVA_1_MEMO_JDK_GC;
+package JAVA_01_MEMO_JDK_GC;
 // ================================================================================
 // JAVA MEMORY & JVM — PART 1
 // TOPIC: JVM Architecture + JDK vs JRE vs JVM + ClassLoader
