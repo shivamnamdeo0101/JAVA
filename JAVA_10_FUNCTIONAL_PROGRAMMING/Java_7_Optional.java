@@ -27,6 +27,17 @@ public class Java_7_Optional {
         // map
         Optional<Integer> lengthOpt = opt.map(String::length);
         System.out.println("Length: " + lengthOpt.orElse(0));
+
+
+        Optional<String> opt1 = Optional.of("Hello");
+        Optional<String> opt2 = Optional.empty();
+
+        opt1.ifPresent(System.out::println); // prints "Hello"
+        opt2.ifPresent(System.out::println); // prints nothing
+
+
+
+
     }
 }
 

@@ -3,7 +3,7 @@ package JAVA_09_MULTITHREADING_CONCURRENCY;
 /**
  * ATM System: Understanding Thread States with Inter-thread Communication
  */
-public class Java_0_ATM_System {
+public class Java_1_ThreadLifecycle_ATM_System {
     static int balance = 1000; // Shared Resource
 
     public static void main(String[] args) throws InterruptedException {
@@ -158,3 +158,72 @@ public class Java_0_ATM_System {
 
 // Enterprise applications में हम हमेशा notifyAll() इस्तेमाल करने की सलाह देते हैं। notify() से 'Lost Notification' की समस्या हो सकती है, जहाँ कुछ थ्रेड्स कभी जाग ही नहीं पाते।
 //  notifyAll() सुनिश्चित करता है कि हर थ्रेड को अपनी कंडीशन चेक करने का मौका मिले।"
+
+
+
+
+/*
+================================================================================
+THREAD LIFECYCLE – DEEP DIVE
+================================================================================
+
+WHAT:
+-----
+Thread lifecycle defines the **states a thread goes through** from creation to termination.
+States: NEW → RUNNABLE → RUNNING → BLOCKED / WAITING → TIMED_WAITING → TERMINATED
+
+WHY IT EXISTS:
+--------------
+• Threads allow concurrent execution.
+• Lifecycle helps JVM & developer manage scheduling, resources, and synchronization.
+• Provides hooks (start, sleep, join, wait) for controlling execution flow.
+
+INTERNAL WORKING:
+-----------------
+• JVM Thread object wraps OS-level native thread.
+• Thread states tracked internally via 'Thread.State' enum.
+• modCount & stack frame per thread.
+• Thread scheduler decides RUNNABLE → RUNNING.
+• OS-level context switching moves thread in CPU.
+
+TIME COMPLEXITY / PERFORMANCE:
+-----------------------------
+• State transitions are constant-time operations.
+• Context switch overhead is OS-dependent.
+• Frequent blocking can reduce CPU efficiency.
+
+CORE FEATURES:
+--------------
+• Lifecycle management
+• Thread-safe execution control
+• Hooks: start(), sleep(), join(), interrupt()
+
+ENTERPRISE PITFALLS:
+-------------------
+❌ Ignoring TERMINATED threads (memory leak)
+❌ Modifying shared state without synchronization
+❌ Misusing join() → deadlocks
+
+REAL SYSTEM USAGE:
+-----------------
+✔ Job scheduling
+✔ Background tasks
+✔ Thread pools (Executor)
+✔ Async processing in microservices
+
+INTERVIEW QUESTIONS + ANSWERS:
+------------------------------
+Q1: What are thread states in Java?
+A: NEW, RUNNABLE, RUNNING, BLOCKED, WAITING, TIMED_WAITING, TERMINATED.
+
+Q2: Can a terminated thread be restarted?
+A: No, start() throws IllegalThreadStateException.
+
+Q3: Difference between RUNNABLE and RUNNING?
+A: RUNNABLE is ready to run; RUNNING is actively on CPU.
+
+INTERVIEW ONE-LINER:
+-------------------
+"Thread lifecycle allows precise control over thread execution and resource management in concurrent systems."
+================================================================================
+*/
