@@ -159,6 +159,8 @@ HASHTABLE:
 • Synchronized at method level
 • No null key/value
 • Legacy, slow
+* lock all the map
+* slow
 
 CONCURRENTHASHMAP:
 ------------------

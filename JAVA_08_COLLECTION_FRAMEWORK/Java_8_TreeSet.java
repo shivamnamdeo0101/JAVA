@@ -24,6 +24,12 @@ public class Java_8_TreeSet {
         treeSet.add(20);
         treeSet.add(20); // duplicate ignored
 
+        for (Integer val : treeSet) {
+            System.out.print(val + " ");
+        }
+
+        System.out.println("--------------------------------");
+
         treeSet.remove(30);
         treeSet.contains(10);
 
