@@ -63,8 +63,8 @@ INTERNAL WORKING:
 -----------------
 • Each object has a monitor (intrinsic lock) and wait set.
 • wait(): releases lock and enters object's wait set
-• notify(): picks one waiting thread
-• notifyAll(): wakes all waiting threads
+• notify(): picks one waiting thread. - “There is no defined algorithm; it is JVM-dependent and unspecified.”
+• notifyAll(): wakes all waiting threads - “Yes, it wakes all waiting threads, but they still compete for the lock, so only one executes at a time.”
 • JVM manages monitor queue and thread scheduling
 
 DEFAULT VALUES:
