@@ -1,3 +1,4 @@
+package JAVA_08_COLLECTION_FRAMEWORK;
 /*
 ====================== JAVA COLLECTIONS FRAMEWORK ======================
 

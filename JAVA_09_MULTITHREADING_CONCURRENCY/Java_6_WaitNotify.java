@@ -1,4 +1,4 @@
-package JAVA_9_MULTITHREADING_CONCURRENCY;
+package JAVA_09_MULTITHREADING_CONCURRENCY;
 
 public class Java_6_WaitNotify {
 

@@ -1,4 +1,4 @@
-package JAVA_9_MULTITHREADING_CONCURRENCY;
+package JAVA_09_MULTITHREADING_CONCURRENCY;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;

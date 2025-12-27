@@ -1,4 +1,4 @@
-package JAVA_8_COLLECTION_FRAMEWORK;
+package JAVA_08_COLLECTION_FRAMEWORK;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
