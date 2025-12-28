@@ -156,6 +156,12 @@ Use     : Interview prep + real-world mental model
 1️⃣ WHAT HAPPENS WHEN YOU RUN A JAVA PROGRAM (COMPLETE FLOW)
 ────────────────────────────────────────────────────────────────────────────────
 
+public	Taaki JVM ise kahin se bhi call kar sake.
+static	Taaki bina object banaye method chal sake.
+void	Kyunki ye function koi value return nahi karta.
+main	Kyunki JVM isi naam ko pehchanta hai.
+String[] args	Command-line inputs accept karne ke liye.
+
 Source Code
 -----------
 Shivam.java

@@ -27,6 +27,7 @@ public class Java_2_ThreadCreation {
         // Limitation: Cannot return results or throw Checked Exceptions.
         Runnable task = () -> System.out.println("[Runnable] Executing decoupled task logic.");
         Thread t2 = new Thread(task);
+        
         t2.start();
         t2.join();
 

@@ -13,6 +13,49 @@ public class Java_11_ParallelismVsConcurrency {
 PARALLELISM vs CONCURRENCY – DEEP DIVE
 ================================================================================
 
+
+===============================================================================
+Java Concurrency vs Parallelism – Arrow Diagram
+===============================================================================
+
+1️⃣ Not Concurrent, Not Parallel
+--------------------------------
+CPU Core 1:
+   Task 1 ██████
+   Task 2       ██████
+→ Sequential execution on single core
+
+2️⃣ Concurrent, Not Parallel
+----------------------------
+CPU Core 1:
+   Task 1 ████      ███
+   Task 2     ███      ███
+→ Tasks overlap via context switching
+→ Single core, interleaved execution
+
+3️⃣ Not Concurrent, Parallel
+----------------------------
+CPU Core 1: Task 1 ██████
+CPU Core 2: Task 2 ██████
+→ Tasks run simultaneously
+→ No interleaving, each task exclusive to a core
+
+4️⃣ Concurrent & Parallel
+------------------------
+CPU Core 1: Task 1 ████   ███
+           Task 2   ████   ███
+CPU Core 2: Task 3 ████   ███
+           Task 4   ████   ███
+→ Tasks run simultaneously on multiple cores
+→ Context switching + parallel execution
+→ Max CPU utilization
+
+===============================================================================
+Legend:
+█████ = Task execution time
+→    = Time flow
+
+
 WHAT:
 -----
 • Concurrency → multiple tasks progress independently, may share CPU
@@ -46,6 +89,17 @@ REAL SYSTEM USAGE:
 ✔ I/O-bound tasks → concurrency
 ✔ Web servers, async pipelines
 ✔ Batch processing
+
+CPU-bound → PARALLELISM
+• Use multiple cores
+• Few threads
+• Heavy computation
+
+I/O-bound → CONCURRENCY
+• Use waiting time efficiently
+• Many threads (virtual preferred)
+• Network / DB / File operations
+
 
 INTERVIEW QUESTIONS + ANSWERS:
 ------------------------------

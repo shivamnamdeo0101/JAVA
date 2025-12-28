@@ -187,6 +187,8 @@ java Shivam         → JIT enabled (fast)
  Code Cache stores JIT compiled native code."
 */
 
+
+
 // ============================================================================
 // END — This is COMPLETE JVM + JIT explanation in ONE WINDOW
 // ============================================================================
